@@ -1,0 +1,84 @@
+<template>
+    <lightning-card class="slds-m-around_x-small">
+        
+        <div class="slds-grid slds-gutters slds-m-bottom_medium">
+            <div class="slds-col slds-size_2-of-8">
+                <lightning-input type="text" 
+                value={searchField1} 
+                label="Current Title" 
+                onchange={handleOnCurrentTitleChange} 
+                class="slds-m-around_x-small"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_2-of-8 slds-m-top_x-small">
+                <lightning-combobox
+                name="miles"
+                label="Miles"
+                value={searchMiles}
+                options={mileoptions}
+                onchange={handleMileChange} 
+                placeholder="Miles"></lightning-combobox>  
+                
+            </div>
+            <div class="slds-col slds-size_2-of-8">
+                <lightning-input type="text" value={searchLocation} label="Location" onchange={handleLocationchange} class="slds-m-around_x-small"></lightning-input>    
+            </div>
+            
+            <div class="slds-col slds-size_2-of-8 slds-m-top_x-small">
+            <lightning-combobox
+                name="education"
+                label="Education"
+                value={searchEducation}
+                options={eduoptions}
+                onchange={handleEducationChange}
+                placeholder="Education" ></lightning-combobox>
+            </div>    
+        </div>   
+        <div class="slds-grid slds-gutters slds-m-left_large slds-m-bottom_xx-large">
+            <div class="slds-col slds-size_1-of-5">
+                <lightning-input type="checkbox" label="Manager Experience" name="managerexp" onchange={managerExpCheck}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-5">
+                <lightning-input type="checkbox" label="Visa Required" name="visareqd" onchange={visaReqdCheck}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-5">
+                <lightning-input type="checkbox" label="US Citizen" name="uscitizen" onchange={usCitizenCheck}></lightning-input>
+            </div>  
+            <div class="slds-col slds-size_2-of-5"></div>  
+        </div>
+        
+            <template if:true={hasApplicants}>
+                <div class="slds-m-around_x-small">
+                    <!--div class="slds-col slds-size_4-of-5"></div>
+                    <div class="slds-col slds-size_1-of-5" style="float:right;">
+                        
+                </div>
+            </div>
+                <div class="slds-grid slds-m-around_x-small">
+                
+                <div>
+                <div class="slds-col slds-size_5-of-5"-->
+                    <lightning-button onclick={getApplicantIds} value="AA" label="Add Applicants"></lightning-button>
+                <lightning-datatable
+                key-field="id"
+                data={applicantArray}
+                columns={columns}>
+                
+            </lightning-datatable>
+        <!--/div>
+
+            </div-->
+            </div>
+
+               
+            </template>
+            <template if:false={hasApplicants}>
+                <div class="slds-m-around_x-small">No applicants found</div>
+            </template>
+        <div slot="footer">
+            
+                <lightning-button slot="actions" label="Search Applicants" icon-name={searchButtonIcon} onclick={handleSearch}></lightning-button>
+           
+            
+        </div>
+    </lightning-card>
+</template>

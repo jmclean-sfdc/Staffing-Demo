@@ -1,0 +1,10 @@
+{
+  "orgName": "jmclean Company",
+  "edition": "Enterprise",
+   "features": ["MultiCurrency","Communities", "ServiceCloud", "Chatbot","EinsteinAnalyticsPlus","PersonAccounts","AnalyticsAdminPerms","LightningServiceConsole","LiveAgent","Macros","SalesCloudEinstein","LightningSalesConsole"],
+	"settings": {
+        	"communitiesSettings": {
+        	  "enableNetworksEnabled": true
+      		}
+	}
+}

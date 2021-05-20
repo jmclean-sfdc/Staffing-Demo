@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Job_Order__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Job Order</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Education__c</fieldNames>
+        <fieldNames>Job_Title__c</fieldNames>
+        <fieldNames>Skills__c</fieldNames>
+        <fieldNames>Bill_Rate__c</fieldNames>
+        <info>&lt;p&gt;Add Candidates to Job and Qualify before submitting&lt;/p&gt;</info>
+        <picklistValueName>Submitting Candidates</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>
